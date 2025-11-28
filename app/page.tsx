@@ -244,7 +244,13 @@ export default function Home() {
           
           <div className="space-y-8">
             {[
-              
+              {
+                title: 'AI Automation Engineer',
+                company: 'Freelance',
+                location: 'Remote',
+                period: 'Jan 2025 - Present',
+                highlights: ['Design & implement AI-powered workflows reducing manual work by 70%', 'Integrate APIs & automation tools (Make, Zapier, n8n) for enterprise clients', 'Optimize business processes through intelligent automation strategies', 'Deliver custom solutions increasing client efficiency and ROI']
+              },
               {
                 title: 'Customer Support & Email Marketing',
                 company: 'Qwoted',
