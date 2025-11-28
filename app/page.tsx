@@ -87,7 +87,7 @@ export default function Home() {
               <span className="text-cyan-400 font-semibold">Welcome to my portfolio</span>
             </motion.div>
             
-            <h1 className="text-5xl text-center! md:text-left! md:text-5xl font-bold mb-6 leading-tight">
+            <h1 className="text-3xl md:text-5xl text-center! md:text-left! font-bold mb-6 leading-tight">
               Customer Success Specialist, Project Manager,  <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">AI Automation Engineer</span>
             </h1>
             
