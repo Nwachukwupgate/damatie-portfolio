@@ -160,7 +160,7 @@ export default function Home() {
                 {/* Image with proper background */}
                 <div className="relative h-full w-full bg-gradient-to-br from-slate-700 via-slate-800 to-slate-900 rounded-3xl overflow-hidden flex items-center justify-center">
                   <img 
-                    src="https://ik.imagekit.io/iqrpbu3nv/WhatsApp_Image_2025-11-28_at_3.08.32_PM-removebg-preview.png"
+                    src="https://ik.imagekit.io/iqrpbu3nv/WhatsApp_Image_2025-11-28_at_12.59.02_PM-removebg-preview.png?updatedAt=1764337265102"
                     alt="Professional"
                     className="h-full w-full object-contain p-4"
                   />
@@ -244,13 +244,7 @@ export default function Home() {
           
           <div className="space-y-8">
             {[
-              {
-                title: 'AI Automation Engineer',
-                company: 'Freelance',
-                location: 'Remote',
-                period: 'Jan 2025 - Present',
-                highlights: ['Design & implement AI-powered workflows reducing manual work by 70%', 'Integrate APIs & automation tools (Make, Zapier, n8n) for enterprise clients', 'Optimize business processes through intelligent automation strategies', 'Deliver custom solutions increasing client efficiency and ROI']
-              },
+              
               {
                 title: 'Customer Support & Email Marketing',
                 company: 'Qwoted',
