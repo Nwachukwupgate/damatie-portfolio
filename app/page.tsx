@@ -92,7 +92,7 @@ export default function Home() {
             </h1>
             
             <p className="text-xl text-center! md:text-left! text-gray-300 mb-8 max-w-xl">
-              Customer focused professional transforming support into strategic growth. 5+ years driving retention, satisfaction, and revenue through human first solutions.
+              Customer focused professional transforming support into strategic growth. 5+ years driving retention, satisfaction, and revenue through human first solutions and project manager.
             </p>
             
             <div className="flex gap-4 flex-wrap justify-center! md:justify-start!">
@@ -123,7 +123,7 @@ export default function Home() {
             </div>
           </motion.div>
 
-          <motion.div 
+          {/* <motion.div 
             className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -131,11 +131,49 @@ export default function Home() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl"></div>
             <img 
-              src="https://ik.imagekit.io/iqrpbu3nv/WhatsApp%20Image%202025-11-28%20at%2012.59.02%20PM.jpeg?w=600&h=600&fit=crop"
+              src="https://ik.imagekit.io/iqrpbu3nv/WhatsApp_Image_2025-11-28_at_3.08.32_PM-removebg-preview.png?w=600&h=600&fit=crop"
               alt="Professional"
               className="w-full h-full object-contain rounded-2xl"
             />
             <div className="absolute inset-0 rounded-2xl border border-cyan-400/30"></div>
+          </motion.div> */}
+          <motion.div 
+            className="relative h-96 md:h-[500px] flex items-center justify-center"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+          >
+            {/* Animated background circles */}
+            <div className="absolute w-96 h-96 bg-gradient-to-br from-cyan-500/30 via-blue-500/20 to-transparent rounded-full blur-3xl -z-10 animate-pulse"></div>
+            <div className="absolute w-80 h-80 bg-gradient-to-tl from-blue-500/20 to-cyan-500/10 rounded-full blur-3xl -z-10"></div>
+            
+            {/* Image container with enhanced styling */}
+            <div className="relative w-full h-full max-w-sm">
+              {/* Outer glow effect */}
+              <div className="absolute -inset-2 bg-gradient-to-r from-cyan-500/50 via-blue-500/50 to-cyan-500/50 rounded-3xl blur-xl opacity-75 -z-10"></div>
+              
+              {/* Inner card */}
+              <div className="relative h-full rounded-3xl overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 p-1">
+                {/* Glass effect border */}
+                <div className="absolute inset-0 rounded-3xl border border-cyan-400/40 pointer-events-none"></div>
+                
+                {/* Image with proper background */}
+                <div className="relative h-full w-full bg-gradient-to-br from-slate-700 via-slate-800 to-slate-900 rounded-3xl overflow-hidden flex items-center justify-center">
+                  <img 
+                    src="https://ik.imagekit.io/iqrpbu3nv/WhatsApp_Image_2025-11-28_at_3.08.32_PM-removebg-preview.png"
+                    alt="Professional"
+                    className="h-full w-full object-contain p-4"
+                  />
+                  
+                  {/* Overlay gradient for depth */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-slate-900/20 pointer-events-none rounded-3xl"></div>
+                  
+                  {/* Corner accents */}
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-cyan-500/20 to-transparent rounded-bl-3xl"></div>
+                  <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-blue-500/20 to-transparent rounded-tr-3xl"></div>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </motion.div>
       </section>
@@ -171,7 +209,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <img 
-                src="https://ik.imagekit.io/iqrpbu3nv/WhatsApp%20Image%202025-11-17%20at%204.37.01%20PM.jpeg?w=800&q=80"
+                src="https://ik.imagekit.io/iqrpbu3nv/WhatsApp%20Image%202025-11-28%20at%203.13.28%20PM.jpeg?w=800&q=80"
                 alt="Customer Support"
                 className="rounded-xl border border-cyan-400/20"
               />
@@ -207,6 +245,13 @@ export default function Home() {
           <div className="space-y-8">
             {[
               {
+                title: 'AI Automation Engineer',
+                company: 'Freelance',
+                location: 'Remote',
+                period: 'Jan 2025 - Present',
+                highlights: ['Design & implement AI-powered workflows reducing manual work by 70%', 'Integrate APIs & automation tools (Make, Zapier, n8n) for enterprise clients', 'Optimize business processes through intelligent automation strategies', 'Deliver custom solutions increasing client efficiency and ROI']
+              },
+              {
                 title: 'Customer Support & Email Marketing',
                 company: 'Qwoted',
                 location: 'New York, USA',
@@ -218,7 +263,7 @@ export default function Home() {
                 company: 'Intelligent Innovations',
                 location: 'Lagos, Nigeria',
                 period: 'Nov 2021 - Oct 2023',
-                highlights: ['5-6 concurrent projects', '94% on time delivery', '35% idle time reduction', '57% resource utilization']
+                highlights: ['Managed 5-6 concurrent projects with 94% on-time delivery', 'Reduced team idle time by 35%, boosting utilization to 57%', 'Developed proactive risk mitigation strategies preventing delays', 'Created detailed timelines reducing scope surprises by 40%']
               },
               {
                 title: 'Customer Care Executive',
