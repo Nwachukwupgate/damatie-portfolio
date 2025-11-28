@@ -160,7 +160,7 @@ export default function Home() {
                 {/* Image with proper background */}
                 <div className="relative h-full w-full bg-gradient-to-br from-slate-700 via-slate-800 to-slate-900 rounded-3xl overflow-hidden flex items-center justify-center">
                   <img 
-                    src="https://ik.imagekit.io/iqrpbu3nv/WhatsApp_Image_2025-11-28_at_12.59.02_PM-removebg-preview.png?updatedAt=1764337265102"
+                    src="https://ik.imagekit.io/iqrpbu3nv/WhatsApp%20Image%202025-11-28%20at%2012.59.02%20PM.jpeg?updatedAt=1764333138596&w=600&h=600&fit=crop"
                     alt="Professional"
                     className="h-full w-full object-contain p-4"
                   />
