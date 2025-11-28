@@ -83,19 +83,19 @@ export default function Home() {
           transition={{ duration: 0.8 }}
         >
           <motion.div {...fadeInUp}>
-            <motion.div className="mb-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
+            <motion.div className="mb-6 text-center! md:text-left!" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
               <span className="text-cyan-400 font-semibold">Welcome to my portfolio</span>
             </motion.div>
             
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              Customer Success <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Specialist</span>
+            <h1 className="text-5xl text-center! md:text-left! md:text-5xl font-bold mb-6 leading-tight">
+              Customer Success Specialist, Project Manager,  <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">AI Automation Engineer</span>
             </h1>
             
-            <p className="text-xl text-gray-300 mb-8 max-w-xl">
+            <p className="text-xl text-center! md:text-left! text-gray-300 mb-8 max-w-xl">
               Customer focused professional transforming support into strategic growth. 5+ years driving retention, satisfaction, and revenue through human first solutions.
             </p>
             
-            <div className="flex gap-4 flex-wrap">
+            <div className="flex gap-4 flex-wrap justify-center! md:justify-start!">
               <motion.a href="#contact" whileHover={{ scale: 1.05 }} className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-cyan-500/50 transition-all">
                 Get in Touch <ArrowRight size={20} />
               </motion.a>
@@ -104,7 +104,7 @@ export default function Home() {
               </motion.a>
             </div>
 
-            <div className="flex gap-6 mt-12">
+            <div className="flex gap-6 mt-12 justify-center! md:justify-start!">
               {[
                 { icon: Linkedin, url: 'https://www.linkedin.com/in/nefe-damatie-/', label: 'LinkedIn' },
                 { icon: Mail, url: 'mailto:nefeclarke@gmail.com', label: 'Email' }
@@ -131,7 +131,7 @@ export default function Home() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl"></div>
             <img 
-              src="https://ik.imagekit.io/iqrpbu3nv/WhatsApp%20Image%202025-11-17%20at%204.30.08%20PM.jpeg?w=600&h=600&fit=crop"
+              src="https://ik.imagekit.io/iqrpbu3nv/WhatsApp%20Image%202025-11-28%20at%2012.59.02%20PM.jpeg?w=600&h=600&fit=crop"
               alt="Professional"
               className="w-full h-full object-contain rounded-2xl"
             />
