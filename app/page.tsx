@@ -92,7 +92,7 @@ export default function Home() {
             </h1>
             
             <p className="text-xl text-center! md:text-left! text-gray-300 mb-8 max-w-xl">
-              Customer focused professional transforming support into strategic growth. 5+ years driving retention, satisfaction, and revenue through human first solutions and project manager.
+              Customer focused professional transforming support into strategic growth. 5+ years driving retention, satisfaction, and revenue through human first solutions and project management.
             </p>
             
             <div className="flex gap-4 flex-wrap justify-center! md:justify-start!">
