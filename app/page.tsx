@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform, useSpring, useInView, AnimatePresence } from 'framer-motion';
-import { Menu, X, Linkedin, Mail, ArrowRight, Sparkles, Zap, Target, TrendingUp } from 'lucide-react';
+import { Menu, X, Linkedin, Mail, ArrowRight, Sparkles, Zap, Target, TrendingUp, ExternalLink, Briefcase, Building2, Heart } from 'lucide-react';
 
 // Floating geometric shapes component
 const FloatingShapes = () => {
@@ -310,7 +310,7 @@ export default function Home() {
               initial="hidden"
               animate="show"
             >
-              {['About', 'Experience', 'Skills', 'Contact'].map((item, i) => (
+              {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map((item, i) => (
                 <motion.a 
                   key={item} 
                   href={`#${item.toLowerCase()}`} 
@@ -367,7 +367,7 @@ export default function Home() {
               transition={{ duration: 0.3 }}
               className="bg-slate-900/95 backdrop-blur-xl border-t border-slate-800 overflow-hidden"
             >
-              {['About', 'Experience', 'Skills', 'Contact'].map((item, i) => (
+              {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map((item, i) => (
                 <motion.a 
                   key={item} 
                   href={`#${item.toLowerCase()}`} 
@@ -808,6 +808,170 @@ export default function Home() {
                   </motion.div>
                 ))}
               </div>
+            </div>
+          </motion.div>
+        </ParallaxSection>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="py-24 px-4">
+        <ParallaxSection speed={0.2}>
+          <motion.div 
+            className="max-w-6xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <motion.div 
+              className="mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-cyan-400 font-medium uppercase tracking-wider text-sm">Featured Work</span>
+              <h2 className="text-4xl md:text-6xl font-bold mt-2">
+                <TextReveal>Notable Projects</TextReveal>
+              </h2>
+            </motion.div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: 'JobMatch',
+                  description: 'An innovative job matching platform that connects job seekers with their ideal opportunities using smart matching algorithms. The platform streamlines the hiring process for both candidates and employers.',
+                  role: 'Project Manager & QA',
+                  icon: Briefcase,
+                  link: 'https://jobmatch.vercel.app',
+                  color: 'cyan',
+                  contributions: [
+                    'Led cross-functional team coordination',
+                    'Managed project timelines & deliverables',
+                    'Conducted comprehensive QA testing',
+                    'Ensured quality standards & bug-free releases'
+                  ]
+                },
+                {
+                  title: 'Union Bank',
+                  description: 'Enterprise banking solution developed for Union Bank through a contracted engagement. Worked on core banking features and digital transformation initiatives to enhance customer experience.',
+                  role: 'Project Manager',
+                  icon: Building2,
+                  link: null,
+                  color: 'blue',
+                  contributions: [
+                    'Coordinated with client stakeholders',
+                    'Managed contracted team deliverables',
+                    'Oversaw project milestones & reporting',
+                    'Facilitated seamless client communication'
+                  ]
+                },
+                {
+                  title: 'HealthPaddy',
+                  description: 'A comprehensive health and wellness platform designed to help users track, manage, and improve their health journey. Features include health monitoring, personalized recommendations, and wellness resources.',
+                  role: 'Project Manager & QA',
+                  icon: Heart,
+                  link: 'https://healthpaddy.vercel.app',
+                  color: 'purple',
+                  contributions: [
+                    'Drove product development lifecycle',
+                    'Established QA processes & standards',
+                    'Managed sprint planning & execution',
+                    'Ensured user-centric feature delivery'
+                  ]
+                }
+              ].map((project, i) => (
+                <motion.div 
+                  key={i}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.15, duration: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  <TiltCard className="h-full">
+                    <div className="relative h-full group">
+                      {/* Glow effect */}
+                      <div className={`absolute -inset-0.5 bg-gradient-to-r from-${project.color}-500/50 via-${project.color}-600/50 to-${project.color}-500/50 rounded-2xl blur opacity-0 group-hover:opacity-50 transition-opacity duration-500`} />
+                      
+                      <div className="relative h-full p-6 md:p-8 rounded-2xl bg-gradient-to-br from-slate-800/80 to-slate-900/80 border border-slate-700/50 group-hover:border-slate-600/50 transition-all backdrop-blur-sm">
+                        {/* Header */}
+                        <div className="flex items-start justify-between mb-4">
+                          <motion.div 
+                            className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-${project.color}-500/20 to-${project.color}-600/20 border border-${project.color}-500/30`}
+                            whileHover={{ rotate: [0, -10, 10, 0], scale: 1.1 }}
+                            transition={{ duration: 0.5 }}
+                          >
+                            <project.icon className={`w-6 h-6 text-${project.color}-400`} />
+                          </motion.div>
+                          
+                          {project.link && (
+                            <motion.a
+                              href={project.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={`p-2 rounded-lg bg-${project.color}-500/10 border border-${project.color}-500/20 text-${project.color}-400 hover:bg-${project.color}-500/20 transition-all`}
+                              whileHover={{ scale: 1.1, rotate: 5 }}
+                              whileTap={{ scale: 0.95 }}
+                            >
+                              <ExternalLink size={18} />
+                            </motion.a>
+                          )}
+                        </div>
+                        
+                        {/* Title & Role */}
+                        <h3 className="text-2xl font-bold mb-2 group-hover:text-cyan-400 transition-colors">
+                          {project.title}
+                        </h3>
+                        <div className={`inline-block px-3 py-1 rounded-full text-xs font-medium bg-${project.color}-500/10 text-${project.color}-400 border border-${project.color}-500/20 mb-4`}>
+                          {project.role}
+                        </div>
+                        
+                        {/* Description */}
+                        <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                          {project.description}
+                        </p>
+                        
+                        {/* Contributions */}
+                        <div className="space-y-2">
+                          <span className="text-xs uppercase tracking-wider text-gray-500 font-medium">Key Contributions</span>
+                          {project.contributions.map((contribution, j) => (
+                            <motion.div 
+                              key={j}
+                              className="flex items-start gap-2 text-sm text-gray-300"
+                              initial={{ opacity: 0, x: -10 }}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              viewport={{ once: true }}
+                              transition={{ delay: i * 0.1 + j * 0.05 }}
+                            >
+                              <span className={`w-1.5 h-1.5 mt-1.5 bg-${project.color}-400 rounded-full flex-shrink-0`} />
+                              {contribution}
+                            </motion.div>
+                          ))}
+                        </div>
+                        
+                        {/* Link button for projects with links */}
+                        {project.link && (
+                          <motion.a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-${project.color}-500/10 border border-${project.color}-500/20 text-${project.color}-400 text-sm font-medium hover:bg-${project.color}-500/20 transition-all group/btn`}
+                            whileHover={{ x: 5 }}
+                          >
+                            Visit Project 
+                            <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
+                          </motion.a>
+                        )}
+                        
+                        {!project.link && (
+                          <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-700/30 border border-slate-600/30 text-gray-500 text-sm font-medium">
+                            <Building2 size={16} />
+                            Enterprise Project
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </TiltCard>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </ParallaxSection>
