@@ -744,7 +744,7 @@ export default function Home() {
                     title: 'Project Manager',
                     company: 'Releazze',
                     location: 'Lagos, Nigeria',
-                    period: 'Nov 2021 - Oct 2022',
+                    period: 'September 2024 - March 2025',
                     highlights: ['Drove cross-functional teams to deliver multiple projects from planning to launch', 'Coordinated stakeholders to ensure clear scope, timelines, and accountability', 'Monitored progress and resolved blockers to keep projects moving', 'Standardized project workflows to improve delivery consistency']
                   },
                   {
