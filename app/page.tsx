@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform, useSpring, useInView, AnimatePresence } from 'framer-motion';
-import { Menu, X, Linkedin, Mail, ArrowRight, Sparkles, Zap, Target, TrendingUp, ExternalLink, Briefcase, Building2, Heart } from 'lucide-react';
+import { Menu, X, Linkedin, Mail, ArrowRight, Sparkles, Zap, Target, TrendingUp, ExternalLink, Briefcase, Building2, Heart, Rocket } from 'lucide-react';
 
 // Floating geometric shapes component
 const FloatingShapes = () => {
@@ -299,7 +299,7 @@ export default function Home() {
             whileHover={{ scale: 1.05 }}
           >
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-              NEFE CLARKE
+            NEFE CLARKE
             </span>
           </motion.div>
           
@@ -359,7 +359,7 @@ export default function Home() {
         </div>
         
         <AnimatePresence>
-          {nav && mobile && (
+        {nav && mobile && (
             <motion.div 
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
@@ -377,11 +377,11 @@ export default function Home() {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: i * 0.1 }}
                 >
-                  {item}
+                {item}
                 </motion.a>
-              ))}
-            </motion.div>
-          )}
+            ))}
+          </motion.div>
+        )}
         </AnimatePresence>
       </motion.nav>
 
@@ -568,19 +568,19 @@ export default function Home() {
       <section className="py-24 px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-slate-800/30 to-slate-900/50" />
         <ParallaxSection speed={0.3}>
-          <motion.div 
+        <motion.div 
             className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10"
-            variants={staggerContainer}
+          variants={staggerContainer}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true }}
-          >
-            {[
+          viewport={{ once: true }}
+        >
+          {[
               { number: '5+', label: 'Years Experience', icon: TrendingUp },
               { number: '8500+', label: 'Issues Resolved', icon: Target },
               { number: '97%', label: 'Satisfaction Rate', icon: Sparkles },
               { number: '87%', label: 'LTV Increase', icon: Zap }
-            ].map((stat, i) => (
+          ].map((stat, i) => (
               <motion.div 
                 key={i} 
                 variants={staggerItem}
@@ -597,9 +597,9 @@ export default function Home() {
                   <AnimatedCounter value={stat.number} />
                 </div>
                 <div className="text-gray-400 text-sm uppercase tracking-wider">{stat.label}</div>
-              </motion.div>
-            ))}
-          </motion.div>
+            </motion.div>
+          ))}
+        </motion.div>
         </ParallaxSection>
       </section>
 
@@ -687,14 +687,14 @@ export default function Home() {
                     >
                       <div className="text-2xl font-bold text-cyan-400 group-hover:text-cyan-300 transition-colors">
                         {item.value}
-                      </div>
+                  </div>
                       <div className="text-gray-400 text-sm">{item.label}</div>
                     </motion.div>
-                  ))}
+                ))}
                 </motion.div>
-              </motion.div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
+        </motion.div>
         </ParallaxSection>
       </section>
 
@@ -725,47 +725,40 @@ export default function Home() {
               <div className="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-500 via-blue-500 to-purple-500" />
               
               <div className="space-y-12">
-                {[
-                  {
-                    title: 'AI Automation Engineer',
-                    company: 'Freelance',
-                    location: 'Remote',
-                    period: 'Jan 2025 - Present',
-                    highlights: ['Design & implement AI-powered workflows reducing manual work by 70%', 'Integrate APIs & automation tools (Make, Zapier, n8n) for enterprise clients', 'Optimize business processes through intelligent automation strategies', 'Deliver custom solutions increasing client efficiency and ROI']
-                  },
-                  {
-                    title: 'Customer Support & Email Marketing',
-                    company: 'Qwoted',
-                    location: 'New York, USA',
-                    period: 'Jan 2023 - Present',
-                    highlights: ['8,500+ inquiries resolved', '97% satisfaction rate', '187% lead quality increase', '68% response time reduction']
-                  },
-                  {
-                    title: 'Project Manager',
-                    company: 'Releazze',
-                    location: 'Lagos, Nigeria',
-                    period: 'September 2024 - March 2025',
-                    highlights: ['Drove cross-functional teams to deliver multiple projects from planning to launch', 'Coordinated stakeholders to ensure clear scope, timelines, and accountability', 'Monitored progress and resolved blockers to keep projects moving', 'Standardized project workflows to improve delivery consistency']
-                  },
-                  {
-                    title: 'Project Manager',
-                    company: 'Intelligent Innovations',
-                    location: 'Lagos, Nigeria',
-                    period: 'Nov 2021 - Oct 2023',
-                    highlights: ['Managed 5-6 concurrent projects with 94% on-time delivery', 'Reduced team idle time by 35%, boosting utilization to 57%', 'Developed proactive risk mitigation strategies preventing delays', 'Created detailed timelines reducing scope surprises by 40%']
-                  },
-                  {
-                    title: 'Customer Care Executive',
-                    company: 'Phixeon Technologies',
-                    location: 'Lagos, Nigeria',
-                    period: 'Sep 2019 - Oct 2021',
-                    highlights: ['30% duplicate reduction', '36 hour resolution time', '40% satisfaction increase', 'Quarterly trend reports']
-                  }
-                ].map((exp, i) => (
-                  <motion.div 
-                    key={i}
+            {[
+              {
+                title: 'AI Automation Engineer',
+                company: 'Freelance',
+                location: 'Remote',
+                period: 'Jan 2025 - Present',
+                highlights: ['Design & implement AI-powered workflows reducing manual work by 70%', 'Integrate APIs & automation tools (Make, Zapier, n8n) for enterprise clients', 'Optimize business processes through intelligent automation strategies', 'Deliver custom solutions increasing client efficiency and ROI']
+              },
+              {
+                title: 'Customer Support & Email Marketing',
+                company: 'Qwoted',
+                location: 'New York, USA',
+                period: 'Jan 2023 - Present',
+                highlights: ['8,500+ inquiries resolved', '97% satisfaction rate', '187% lead quality increase', '68% response time reduction']
+              },
+              {
+                title: 'Project Manager',
+                company: 'Intelligent Innovations',
+                location: 'Lagos, Nigeria',
+                period: 'Nov 2021 - Oct 2023',
+                highlights: ['Managed 5-6 concurrent projects with 94% on-time delivery', 'Reduced team idle time by 35%, boosting utilization to 57%', 'Developed proactive risk mitigation strategies preventing delays', 'Created detailed timelines reducing scope surprises by 40%']
+              },
+              {
+                title: 'Customer Care Executive',
+                company: 'Phixeon Technologies',
+                location: 'Lagos, Nigeria',
+                period: 'Sep 2019 - Oct 2021',
+                highlights: ['30% duplicate reduction', '36 hour resolution time', '40% satisfaction increase', 'Quarterly trend reports']
+              }
+            ].map((exp, i) => (
+              <motion.div 
+                key={i}
                     initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.1, duration: 0.6 }}
                     viewport={{ once: true }}
                     className="relative pl-8 md:pl-20"
@@ -774,23 +767,23 @@ export default function Home() {
                     <motion.div 
                       className="absolute left-0 md:left-8 top-2 w-4 h-4 -translate-x-1/2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 border-4 border-slate-950"
                       whileInView={{ scale: [0, 1.2, 1] }}
-                      viewport={{ once: true }}
+                viewport={{ once: true }}
                       transition={{ delay: i * 0.1 + 0.2 }}
                     />
                     
                     <motion.div 
                       className="p-6 rounded-2xl bg-slate-800/30 border border-slate-700/50 hover:border-cyan-500/30 transition-all group"
                       whileHover={{ x: 10, backgroundColor: "rgba(30, 41, 59, 0.5)" }}
-                    >
-                      <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-4">
-                        <div>
+              >
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-4">
+                  <div>
                           <h3 className="text-2xl font-bold group-hover:text-cyan-400 transition-colors">{exp.title}</h3>
-                          <p className="text-cyan-400 font-semibold">{exp.company} • {exp.location}</p>
-                        </div>
+                    <p className="text-cyan-400 font-semibold">{exp.company} • {exp.location}</p>
+                  </div>
                         <span className="text-gray-400 whitespace-nowrap px-3 py-1 bg-slate-700/50 rounded-full text-sm">{exp.period}</span>
-                      </div>
+                </div>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        {exp.highlights.map((h, j) => (
+                  {exp.highlights.map((h, j) => (
                           <motion.div 
                             key={j} 
                             className="flex items-start gap-2 text-sm text-gray-300"
@@ -802,8 +795,8 @@ export default function Home() {
                             <span className="w-1.5 h-1.5 mt-2 bg-cyan-400 rounded-full flex-shrink-0" />
                             {h}
                           </motion.div>
-                        ))}
-                      </div>
+                  ))}
+                </div>
                     </motion.div>
                   </motion.div>
                 ))}
@@ -876,6 +869,20 @@ export default function Home() {
                     'Established QA processes & standards',
                     'Managed sprint planning & execution',
                     'Ensured user-centric feature delivery'
+                  ]
+                },
+                {
+                  title: 'Releazze',
+                  description: 'A dynamic product launch and release management platform helping teams streamline their go-to-market strategies. Enables efficient coordination of product releases across multiple channels and stakeholders.',
+                  role: 'Project Manager',
+                  icon: Rocket,
+                  link: null,
+                  color: 'cyan',
+                  contributions: [
+                    'Drove cross-functional teams from planning to launch',
+                    'Coordinated stakeholders for clear scope & timelines',
+                    'Monitored progress and resolved blockers',
+                    'Standardized project workflows for consistency'
                   ]
                 }
               ].map((project, i) => (
@@ -970,10 +977,10 @@ export default function Home() {
                       </div>
                     </div>
                   </TiltCard>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
         </ParallaxSection>
       </section>
 
@@ -997,34 +1004,34 @@ export default function Home() {
                 <TextReveal>Skills & Expertise</TextReveal>
               </h2>
             </motion.div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  category: 'Customer Relations',
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                category: 'Customer Relations',
                   icon: Target,
                   color: 'cyan',
-                  skills: ['CRM & HubSpot', 'Conflict Resolution', 'Customer Retention', 'Multi-channel Support', 'First Contact Resolution']
-                },
-                {
-                  category: 'Project Management',
+                skills: ['CRM & HubSpot', 'Conflict Resolution', 'Customer Retention', 'Multi-channel Support', 'First Contact Resolution']
+              },
+              {
+                category: 'Project Management',
                   icon: TrendingUp,
                   color: 'blue',
-                  skills: ['Timeline Development', 'Resource Allocation', 'Risk Management', 'Stakeholder Communication', 'Agile Methodology']
-                },
-                {
-                  category: 'Marketing & Analytics',
+                skills: ['Timeline Development', 'Resource Allocation', 'Risk Management', 'Stakeholder Communication', 'Agile Methodology']
+              },
+              {
+                category: 'Marketing & Analytics',
                   icon: Zap,
                   color: 'purple',
-                  skills: ['Email Marketing Campaigns', 'A/B Testing', 'Data Segmentation', 'KPI Analysis', 'Lead Generation']
-                }
-              ].map((skillSet, i) => (
-                <motion.div 
-                  key={i}
+                skills: ['Email Marketing Campaigns', 'A/B Testing', 'Data Segmentation', 'KPI Analysis', 'Lead Generation']
+              }
+            ].map((skillSet, i) => (
+              <motion.div 
+                key={i}
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.15, duration: 0.6 }}
-                  viewport={{ once: true }}
+                viewport={{ once: true }}
                 >
                   <TiltCard className="h-full">
                     <div className={`h-full p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-${skillSet.color}-500/30 transition-all group`}>
@@ -1039,7 +1046,7 @@ export default function Home() {
                       <h3 className="text-2xl font-bold mb-6 group-hover:text-cyan-400 transition-colors">{skillSet.category}</h3>
                       
                       <div className="space-y-3">
-                        {skillSet.skills.map((skill, j) => (
+                  {skillSet.skills.map((skill, j) => (
                           <motion.div 
                             key={j} 
                             className="flex items-center gap-3"
@@ -1058,10 +1065,10 @@ export default function Home() {
                       </div>
                     </div>
                   </TiltCard>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
         </ParallaxSection>
       </section>
 
@@ -1085,8 +1092,8 @@ export default function Home() {
                 <TextReveal>Let's Work Together</TextReveal>
               </h2>
               <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
-                Ready to discuss how I can drive customer success for your organization? Let's connect.
-              </p>
+            Ready to discuss how I can drive customer success for your organization? Let's connect.
+          </p>
             </motion.div>
             
             <motion.div 
@@ -1097,37 +1104,37 @@ export default function Home() {
               transition={{ delay: 0.2 }}
             >
               <MagneticButton href="mailto:nefeclarke@gmail.com" variant="primary" className="px-10 py-4">
-                <Mail size={20} /> Send Email
+              <Mail size={20} /> Send Email
               </MagneticButton>
-              
+            
               <MagneticButton 
-                href="https://www.linkedin.com/in/nefe-damatie-/"
+              href="https://www.linkedin.com/in/nefe-damatie-/"
                 variant="secondary"
                 className="px-10 py-4"
-              >
-                <Linkedin size={20} /> LinkedIn Profile
+            >
+              <Linkedin size={20} /> LinkedIn Profile
               </MagneticButton>
             </motion.div>
 
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
               transition={{ delay: 0.3 }}
               className="mt-16 pt-12 border-t border-slate-800 space-y-4"
-            >
-              <p className="text-gray-400">📍 Lagos, Nigeria | 📞 +234 8139296581</p>
-              <p className="text-gray-500 text-sm">© 2025 Damatie Ufuomanefe. All rights reserved.</p>
-            </motion.div>
+          >
+            <p className="text-gray-400">📍 Lagos, Nigeria | 📞 +234 8139296581</p>
+            <p className="text-gray-500 text-sm">© 2025 Damatie Ufuomanefe. All rights reserved.</p>
           </motion.div>
+        </motion.div>
         </ParallaxSection>
       </section>
 
       {/* Scroll to Top Button */}
       <AnimatePresence>
         {scrolled && (
-          <motion.button
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      <motion.button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             initial={{ opacity: 0, scale: 0.5, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.5, y: 20 }}
@@ -1136,7 +1143,7 @@ export default function Home() {
             className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center shadow-lg shadow-cyan-500/30 z-40"
           >
             <ArrowRight size={22} className="rotate-[-90deg]" />
-          </motion.button>
+      </motion.button>
         )}
       </AnimatePresence>
     </div>
