@@ -311,7 +311,7 @@ export default function Home() {
               initial="hidden"
               animate="show"
             >
-              {['About', 'Experience', 'Projects', 'Articles', 'Skills', 'Contact'].map((item, i) => (
+              {['About', 'Services', 'Work', 'Articles', 'Experience', 'Contact'].map((item, i) => (
                 <motion.a 
                   key={item} 
                   href={item === 'Articles' ? '/articles' : `#${item.toLowerCase()}`} 
@@ -368,7 +368,7 @@ export default function Home() {
               transition={{ duration: 0.3 }}
               className="bg-slate-900/95 backdrop-blur-xl border-t border-slate-800 overflow-hidden"
             >
-              {['About', 'Experience', 'Projects', 'Articles', 'Skills', 'Contact'].map((item, i) => (
+              {['About', 'Services', 'Work', 'Articles', 'Experience', 'Contact'].map((item, i) => (
                 <motion.a 
                   key={item} 
                   href={item === 'Articles' ? '/articles' : `#${item.toLowerCase()}`} 
@@ -411,15 +411,13 @@ export default function Home() {
             </motion.div>
             
             <motion.h1 
-              className="text-4xl md:text-4xl lg:text-4xl text-center md:text-left! font-bold mb-6 leading-tight"
+              className="text-3xl md:text-4xl lg:text-5xl text-center md:text-left! font-bold mb-6 leading-[1.15] tracking-tight flex flex-col gap-1"
               variants={staggerItem}
             >
-              <TextReveal>Customer Success Specialist,</TextReveal>
-              <br />
-              <TextReveal delay={0.1}>Project Manager,</TextReveal>
-              <br />
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text">
-                <TextReveal delay={0.2}>AI Automation Engineer</TextReveal>
+              <TextReveal>Media Consultant</TextReveal>
+              <TextReveal delay={0.1}>AI Automation Specialist</TextReveal>
+              <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <TextReveal delay={0.2}>Prompt Engineer</TextReveal>
               </span>
             </motion.h1>
             
@@ -427,9 +425,9 @@ export default function Home() {
               className="text-lg md:text-xl text-center md:text-left! text-gray-400 mb-8 max-w-xl leading-relaxed"
               variants={staggerItem}
             >
-              Customer focused professional transforming support into strategic growth. 
-              <span className="text-cyan-400"> 5+ years</span> driving retention, satisfaction, 
-              and revenue through human first solutions and project management.
+              I help people and brands tell stories that actually get heard, through writing, 
+              podcasts, documentary storytelling, and voiceover, 
+              <span className="text-cyan-400"> sharpened by AI-powered workflows</span>.
             </motion.p>
             
             <motion.div 
@@ -439,8 +437,8 @@ export default function Home() {
               <MagneticButton href="#contact" variant="primary">
                 Get in Touch <ArrowRight size={20} />
               </MagneticButton>
-              <MagneticButton href="#experience" variant="secondary">
-                View Experience
+              <MagneticButton href="#work" variant="secondary">
+                See My Work
               </MagneticButton>
             </motion.div>
  
@@ -521,7 +519,7 @@ export default function Home() {
               <div className="relative h-full rounded-3xl overflow-hidden bg-gradient-to-br from-slate-800/90 to-slate-900/90 p-1 backdrop-blur-sm border border-white/10">
                 <div className="relative h-full w-full bg-gradient-to-br from-slate-700/50 via-slate-800/50 to-slate-900/50 rounded-3xl overflow-hidden flex items-center justify-center">
                   <img 
-                    src="https://ik.imagekit.io/iqrpbu3nv/WhatsApp%20Image%202025-11-28%20at%2012.59.02%20PM.jpeg?updatedAt=1764333138596&w=600&h=600&fit=crop"
+                    src="https://i.postimg.cc/bvcDK8rY/OFFICIAL-STANDING-POTRAIT.png"
                     alt="Nefe Clarke - Professional"
                     className="h-full w-full object-contain p-4"
                   />
@@ -534,14 +532,14 @@ export default function Home() {
                     animate={{ y: [0, -5, 0] }}
                     transition={{ duration: 2, repeat: Infinity }}
                   >
-                    <Zap size={12} /> AI Engineer
+                    <Zap size={12} /> Media Consultant
                   </motion.div>
                   <motion.div 
                     className="absolute bottom-4 left-4 px-3 py-1 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-500/30 text-xs text-blue-400 flex items-center gap-1"
                     animate={{ y: [0, -5, 0] }}
                     transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
                   >
-                    <Target size={12} /> 5+ Years
+                    <Target size={12} /> Storyteller
                   </motion.div>
                 </div>
               </div>
@@ -577,10 +575,10 @@ export default function Home() {
           viewport={{ once: true }}
         >
           {[
-              { number: '5+', label: 'Years Experience', icon: TrendingUp },
-              { number: '8500+', label: 'Issues Resolved', icon: Target },
-              { number: '97%', label: 'Satisfaction Rate', icon: Sparkles },
-              { number: '87%', label: 'LTV Increase', icon: Zap }
+              { number: '5+', label: 'Years in Communication', icon: TrendingUp },
+              { number: '84%', label: 'Client Satisfaction', icon: Sparkles },
+              { number: '40%', label: 'Engagement Growth', icon: Target },
+              { number: '25%', label: 'Renewal Growth', icon: Zap }
           ].map((stat, i) => (
               <motion.div 
                 key={i} 
@@ -636,7 +634,7 @@ export default function Home() {
                   <div className="absolute -inset-2 bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-purple-500/30 rounded-2xl blur-xl opacity-50" />
                   <div className="relative rounded-2xl overflow-hidden border border-white/10">
                     <img 
-                      src="https://ik.imagekit.io/iqrpbu3nv/WhatsApp%20Image%202025-11-28%20at%203.13.28%20PM.jpeg?w=800&q=80"
+                      src="https://i.postimg.cc/rsKwDYsf/blond-and-brownsuit.png"
                       alt="Nefe Clarke working"
                       className="w-full"
                     />
@@ -656,19 +654,20 @@ export default function Home() {
                   className="text-lg text-gray-300 leading-relaxed"
                   variants={staggerItem}
                 >
-                  I'm a customer focused professional dedicated to transforming support into strategic growth. 
-                  With <span className="text-cyan-400 font-semibold">5+ years</span> spanning customer support, 
-                  project management, and email marketing, I've consistently delivered tangible outcomes that 
-                  directly impact bottom line metrics.
+                  I'm a media consultant, storyteller, and author based in Lagos, Nigeria. For over 
+                  <span className="text-cyan-400 font-semibold"> five years</span> I've worked at the meeting 
+                  point of communication and people, running client relationships, managing projects, and 
+                  building campaigns that move audiences to act.
                 </motion.p>
                 
                 <motion.p 
                   className="text-lg text-gray-300 leading-relaxed"
                   variants={staggerItem}
                 >
-                  My approach combines empathetic communication with data driven insights. I don't just 
-                  resolve issues — I identify patterns, anticipate needs, and create retention strategies 
-                  that turn customers into advocates.
+                  Storytelling has always been the thread, from street interviews in broadcast media to 
+                  scripting campaign videos to my own documentary work. Today I write, host, narrate, and 
+                  produce, and I use AI automation and prompt engineering to make it all faster and sharper. 
+                  If you have a message worth hearing, my job is to make sure it reaches the people who need it.
                 </motion.p>
  
                 <motion.div 
@@ -676,10 +675,10 @@ export default function Home() {
                   variants={staggerItem}
                 >
                   {[
-                    { value: '87%', label: 'LTV Increase' },
-                    { value: '92%', label: 'Retention' },
-                    { value: '48%', label: 'Email Open Rate' },
-                    { value: '342%', label: 'Lead Growth' }
+                    { value: 'Author', label: 'Book in Progress' },
+                    { value: 'Host', label: 'True Crimes with Dawn' },
+                    { value: '3', label: 'Published Articles' },
+                    { value: '84%', label: 'Client Satisfaction' }
                   ].map((item, i) => (
                     <motion.div 
                       key={i} 
@@ -728,32 +727,39 @@ export default function Home() {
               <div className="space-y-12">
             {[
               {
-                title: 'AI Automation Engineer',
-                company: 'Freelance',
+                title: 'AI Training & Automation (Freelance)',
+                company: 'LUEL AI \u00b7 Outlier \u00b7 Handshake AI',
                 location: 'Remote',
-                period: 'Jan 2025 - Present',
-                highlights: ['Design & implement AI-powered workflows reducing manual work by 70%', 'Integrate APIs & automation tools (Make, Zapier, n8n) for enterprise clients', 'Optimize business processes through intelligent automation strategies', 'Deliver custom solutions increasing client efficiency and ROI']
+                period: 'Ongoing',
+                highlights: ['Trained AI models on Nigerian accents and conversational styles', 'Prompt engineering and model evaluation', 'Data annotation across text, audio, and video', 'Building AI-assisted media and content workflows']
               },
               {
-                title: 'Customer Support & Email Marketing',
+                title: 'Email Marketing & Customer Support Specialist',
                 company: 'Qwoted',
-                location: 'New York, USA',
-                period: 'Jan 2023 - Present',
-                highlights: ['8,500+ inquiries resolved', '97% satisfaction rate', '187% lead quality increase', '68% response time reduction']
+                location: 'Remote, USA',
+                period: '2024 - Dec 2025',
+                highlights: ['Ran segmented email campaigns for client audiences', '84% client satisfaction across 300+ monthly interactions', 'Connected journalists from major outlets with expert sources', 'Owned multi-channel communication across email, chat, and CRM']
+              },
+              {
+                title: 'Media Success Manager',
+                company: 'Qwoted',
+                location: 'Remote, USA',
+                period: 'Nov 2023 - 2024',
+                highlights: ['Managed media campaigns and client storytelling', 'Grew client engagement by 40%', 'Improved renewal rates by 25% through proactive communication', 'Supported journalist and expert matchmaking for stories']
               },
               {
                 title: 'Project Manager',
                 company: 'Intelligent Innovations',
                 location: 'Lagos, Nigeria',
-                period: 'Nov 2021 - Oct 2023',
-                highlights: ['Managed 5-6 concurrent projects with 94% on-time delivery', 'Reduced team idle time by 35%, boosting utilization to 57%', 'Developed proactive risk mitigation strategies preventing delays', 'Created detailed timelines reducing scope surprises by 40%']
+                period: 'May 2022 - Oct 2023',
+                highlights: ['Delivered concurrent projects at a 94% on-time rate', 'Scripted and presented EdTech recruitment campaign videos', 'Coordinated cross-functional teams and stakeholders', 'Built timelines and risk plans that prevented delays']
               },
               {
                 title: 'Customer Care Executive',
                 company: 'Phixeon Technologies',
                 location: 'Lagos, Nigeria',
-                period: 'Sep 2019 - Oct 2021',
-                highlights: ['30% duplicate reduction', '36 hour resolution time', '40% satisfaction increase', 'Quarterly trend reports']
+                period: '2017 - 2018',
+                highlights: ['Handled high-volume customer communication', 'Improved processes to reduce repeat inquiries', 'Built a foundation in listening to audiences', 'Learned how people ask, complain, and connect']
               }
             ].map((exp, i) => (
               <motion.div 
@@ -808,7 +814,7 @@ export default function Home() {
       </section>
  
       {/* Projects Section */}
-      <section id="projects" className="py-24 px-4">
+      <section id="work" className="py-24 px-4">
         <ParallaxSection speed={0.2}>
           <motion.div 
             className="max-w-6xl mx-auto"
@@ -824,19 +830,61 @@ export default function Home() {
             >
               <span className="text-cyan-400 font-medium uppercase tracking-wider text-sm">Featured Work</span>
               <h2 className="text-4xl md:text-6xl font-bold mt-2">
-                <TextReveal>Notable Projects</TextReveal>
+                <TextReveal>Selected Work</TextReveal>
               </h2>
             </motion.div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
+                  title: 'The Book',
+                  description: 'My debut book, currently in progress. A long-form storytelling project and the flagship of everything I do as a writer and storyteller. Details coming soon.',
+                  role: 'Author \u00b7 In Progress',
+                  icon: Sparkles,
+                  link: null,
+                  color: 'cyan',
+                  contributions: [
+                    'Long-form narrative storytelling',
+                    'Research and structured writing',
+                    'The flagship of the Nefe Clarke brand',
+                    'Publication details to come'
+                  ]
+                },
+                {
+                  title: 'True Crimes with Dawn',
+                  description: 'My documentary storytelling channel on YouTube. Research-driven true crime narratives built from scripting, narration, and pacing, storytelling at its purest.',
+                  role: 'Creator \u00b7 Host \u00b7 Narrator',
+                  icon: Rocket,
+                  link: null,
+                  color: 'blue',
+                  contributions: [
+                    'Deep research into real cases',
+                    'Narrative scripting and structure',
+                    'Voiceover and narration',
+                    'End-to-end video storytelling'
+                  ]
+                },
+                {
+                  title: 'EdTech Campaign Videos',
+                  description: 'Recruitment and product campaign videos for an EdTech brand, promoting a new product and driving enrollment for the next cohort of learners transitioning into tech.',
+                  role: 'Scriptwriter & Presenter',
+                  icon: Briefcase,
+                  link: null,
+                  color: 'purple',
+                  contributions: [
+                    'Scripted campaign messaging',
+                    'On-camera presenting',
+                    'Product storytelling',
+                    'Enrollment-driving calls to action'
+                  ]
+                },
+                {
                   title: 'JobMatch',
-                  description: 'An innovative job matching platform that connects job seekers with their ideal opportunities using smart matching algorithms. The platform streamlines the hiring process for both candidates and employers.',
+                  description: 'A job matching platform connecting job seekers with the right opportunities through smart matching. I led coordination, timelines, and quality assurance through to release.',
                   role: 'Project Manager & QA',
                   icon: Briefcase,
                   link: 'https://jobmatch.vercel.app',
-                  color: 'cyan',
+                  color: 'blue',
                   contributions: [
                     'Led cross-functional team coordination',
                     'Managed project timelines & deliverables',
@@ -845,22 +893,8 @@ export default function Home() {
                   ]
                 },
                 {
-                  title: 'Union Bank',
-                  description: 'Enterprise banking solution developed for Union Bank through a contracted engagement. Worked on core banking features and digital transformation initiatives to enhance customer experience.',
-                  role: 'Project Manager',
-                  icon: Building2,
-                  link: null,
-                  color: 'blue',
-                  contributions: [
-                    'Coordinated with client stakeholders',
-                    'Managed contracted team deliverables',
-                    'Oversaw project milestones & reporting',
-                    'Facilitated seamless client communication'
-                  ]
-                },
-                {
                   title: 'HealthPaddy',
-                  description: 'A comprehensive health and wellness platform designed to help users track, manage, and improve their health journey. Features include health monitoring, personalized recommendations, and wellness resources.',
+                  description: 'A health and wellness platform helping users track, manage, and improve their health journey. I drove the product development lifecycle and QA standards.',
                   role: 'Project Manager & QA',
                   icon: Heart,
                   link: 'https://healthpaddy.vercel.app',
@@ -873,17 +907,45 @@ export default function Home() {
                   ]
                 },
                 {
+                  title: 'Union Bank',
+                  description: 'Enterprise banking engagement delivered through a contracted team, supporting core banking features and digital transformation to improve customer experience.',
+                  role: 'Project Manager',
+                  icon: Building2,
+                  link: null,
+                  color: 'cyan',
+                  contributions: [
+                    'Coordinated with client stakeholders',
+                    'Managed contracted team deliverables',
+                    'Oversaw project milestones & reporting',
+                    'Facilitated seamless client communication'
+                  ]
+                },
+                {
                   title: 'Releazze',
-                  description: 'A dynamic product launch and release management platform helping teams streamline their go-to-market strategies. Enables efficient coordination of product releases across multiple channels and stakeholders.',
+                  description: 'A product launch and release management platform that helps teams streamline go-to-market. I drove teams from planning through launch with standardized workflows.',
                   role: 'Project Manager',
                   icon: Rocket,
                   link: null,
-                  color: 'cyan',
+                  color: 'blue',
                   contributions: [
                     'Drove cross-functional teams from planning to launch',
                     'Coordinated stakeholders for clear scope & timelines',
                     'Monitored progress and resolved blockers',
                     'Standardized project workflows for consistency'
+                  ]
+                },
+                {
+                  title: 'Articles & Essays',
+                  description: 'Original opinion pieces, essays, and commentary, from youth climate action in Lagos to what street interviews taught me about listening.',
+                  role: 'Writer',
+                  icon: Heart,
+                  link: '/articles',
+                  color: 'cyan',
+                  contributions: [
+                    'Opinion and commentary writing',
+                    'Personal essay storytelling',
+                    'Clear, human-first voice',
+                    'Published on this site'
                   ]
                 }
               ].map((project, i) => (
@@ -972,7 +1034,7 @@ export default function Home() {
                         {!project.link && (
                           <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-700/30 border border-slate-600/30 text-gray-500 text-sm font-medium">
                             <Building2 size={16} />
-                            Enterprise Project
+                            Details on Request
                           </div>
                         )}
                       </div>
@@ -986,7 +1048,7 @@ export default function Home() {
       </section>
  
       {/* Skills Section */}
-      <section id="skills" className="py-24 px-4">
+      <section id="services" className="py-24 px-4">
         <ParallaxSection speed={0.2}>
           <motion.div 
             className="max-w-6xl mx-auto"
@@ -1000,31 +1062,49 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <span className="text-cyan-400 font-medium uppercase tracking-wider text-sm">What I Bring</span>
+              <span className="text-cyan-400 font-medium uppercase tracking-wider text-sm">What I Offer</span>
               <h2 className="text-4xl md:text-6xl font-bold mt-2">
-                <TextReveal>Skills & Expertise</TextReveal>
+                <TextReveal>Services</TextReveal>
               </h2>
             </motion.div>
           
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                category: 'Customer Relations',
-                  icon: Target,
-                  color: 'cyan',
-                skills: ['CRM & HubSpot', 'Conflict Resolution', 'Customer Retention', 'Multi-channel Support', 'First Contact Resolution']
-              },
-              {
-                category: 'Project Management',
-                  icon: TrendingUp,
-                  color: 'blue',
-                skills: ['Timeline Development', 'Resource Allocation', 'Risk Management', 'Stakeholder Communication', 'Agile Methodology']
-              },
-              {
-                category: 'Marketing & Analytics',
+                category: 'Content & Scriptwriting',
                   icon: Zap,
+                  color: 'cyan',
+                skills: ['Articles and essays', 'Scripts for video and podcast', 'Long-form storytelling', 'Editorial and copywriting']
+              },
+              {
+                category: 'Ghostwriting',
+                  icon: Sparkles,
+                  color: 'blue',
+                skills: ['Books and thought leadership', 'Your voice, my pen', 'Confidential collaboration', 'Authentic tone matching']
+              },
+              {
+                category: 'Podcast Hosting & Production',
+                  icon: Target,
                   color: 'purple',
-                skills: ['Email Marketing Campaigns', 'A/B Testing', 'Data Segmentation', 'KPI Analysis', 'Lead Generation']
+                skills: ['Concept to published episode', 'Hosting and interviewing', 'Narrative structure', 'Audience-first pacing']
+              },
+              {
+                category: 'Documentary & Video Storytelling',
+                  icon: Rocket,
+                  color: 'cyan',
+                skills: ['Research-driven narratives', 'True Crimes with Dawn', 'Campaign and brand videos', 'On-camera presenting']
+              },
+              {
+                category: 'Voiceover & Narration',
+                  icon: Heart,
+                  color: 'blue',
+                skills: ['Documentaries and adverts', 'Warm, clear delivery', 'Brand video narration', 'Podcast intros and reads']
+              },
+              {
+                category: 'AI-Powered Media',
+                  icon: TrendingUp,
+                  color: 'purple',
+                skills: ['Prompt engineering', 'AI-assisted research and drafting', 'Automated content workflows', 'Zapier, Notion, and CRM tools']
               }
             ].map((skillSet, i) => (
               <motion.div 
@@ -1090,10 +1170,10 @@ export default function Home() {
             >
               <span className="text-cyan-400 font-medium uppercase tracking-wider text-sm">Let's Connect</span>
               <h2 className="text-4xl md:text-6xl font-bold mt-2 mb-6">
-                <TextReveal>Let's Work Together</TextReveal>
+                <TextReveal>Let's Tell Your Story</TextReveal>
               </h2>
               <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
-            Ready to discuss how I can drive customer success for your organization? Let's connect.
+            Have a message worth hearing? Let's talk about how to get it out into the world.
           </p>
             </motion.div>
             
@@ -1125,7 +1205,7 @@ export default function Home() {
               className="mt-16 pt-12 border-t border-slate-800 space-y-4"
           >
             <p className="text-gray-400">📍 Lagos, Nigeria | 📞 +234 8139296581</p>
-            <p className="text-gray-500 text-sm">© 2025 Damatie Ufuomanefe. All rights reserved.</p>
+            <p className="text-gray-500 text-sm">© 2026 Nefe Clarke. All rights reserved.</p>
           </motion.div>
         </motion.div>
         </ParallaxSection>
