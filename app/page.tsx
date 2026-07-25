@@ -634,7 +634,7 @@ export default function Home() {
                   <div className="absolute -inset-2 bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-purple-500/30 rounded-2xl blur-xl opacity-50" />
                   <div className="relative rounded-2xl overflow-hidden border border-white/10">
                     <img 
-                      src="https://i.postimg.cc/rsKwDYsf/blond-and-brownsuit.png"
+                      src="https://i.postimg.cc/yxzcXJpN/gray-suit.png"
                       alt="Nefe Clarke working"
                       className="w-full"
                     />
