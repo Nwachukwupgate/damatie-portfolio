@@ -1,50 +1,28 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Nefe Clarke | Customer Success Specialist & AI Automation Engineer",
+  title: "Nefe Clarke | Communications & Marketing Specialist",
   description:
-    "Portfolio of Nefe Clarke (Damatie Ufuomanefe) — Customer Success Specialist, Project Manager, and AI Automation Engineer with 5+ years of experience driving retention, satisfaction, and revenue through human-first solutions.",
+    "Nefe Clarke is a communications and marketing specialist in Lagos, Nigeria. Email and campaign strategy, content and storytelling, and virtual assistance for founders and small teams.",
   keywords: [
     "Nefe Clarke",
     "Damatie Ufuomanefe",
-    "Customer Success Specialist",
-    "Project Manager",
-    "AI Automation Engineer",
-    "Customer Support",
+    "Communications Specialist",
+    "Marketing Specialist",
     "Email Marketing",
-    "CRM",
-    "HubSpot",
+    "Campaign Strategy",
+    "Virtual Assistant",
+    "Content Writer",
+    "Storyteller",
+    "Podcast Host",
+    "Voiceover",
+    "AI Content Systems",
+    "Dawn at Dusk",
     "Lagos Nigeria",
   ],
-  authors: [{ name: "Nefe Clarke", url: "https://www.linkedin.com/in/nefe-damatie-/" }],
+  authors: [{ name: "Nefe Clarke" }],
   creator: "Nefe Clarke",
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    title: "Nefe Clarke | Customer Success Specialist & AI Automation Engineer",
-    description:
-      "Customer-focused professional transforming support into strategic growth. 5+ years driving retention, satisfaction, and revenue.",
-    siteName: "Nefe Clarke Portfolio",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Nefe Clarke | Customer Success Specialist & AI Automation Engineer",
-    description:
-      "Customer-focused professional transforming support into strategic growth. 5+ years driving retention, satisfaction, and revenue.",
-    creator: "@nefeclarke",
-  },
   robots: {
     index: true,
     follow: true,
@@ -56,6 +34,26 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  openGraph: {
+    title: "Nefe Clarke | Communications & Marketing Specialist",
+    description:
+      "Get heard. Get results. Get your time back. Email and campaign strategy, content and storytelling, and virtual assistance.",
+    url: "https://nefeclarke.com",
+    siteName: "Nefe Clarke",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nefe Clarke | Communications & Marketing Specialist",
+    description:
+      "Get heard. Get results. Get your time back. Email and campaign strategy, content and storytelling, and virtual assistance.",
+    creator: "@nefeclarke",
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+  },
 };
 
 export default function RootLayout({
@@ -65,11 +63,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
