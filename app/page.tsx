@@ -895,7 +895,7 @@ export default function Home() {
               <div className="space-y-12">
                 {[
                   {
-                    title: 'Virtual Assistant & Communications Support',
+                    title: 'Virtual Assistant & AI Automation Support',
                     company: 'Freelance',
                     location: 'Remote',
                     period: 'Jan 2024 – Present',
@@ -903,26 +903,16 @@ export default function Home() {
                       'Inbox management, correspondence, and follow ups for clients',
                       'Calendar coordination and deadline tracking across time zones',
                       'Research, reporting, and content scheduling',
-                      'AI-assisted workflows to speed up repetitive admin'
-                    ]
-                  },
-                  {
-                    title: 'AI Automation & Prompt Engineering',
-                    company: 'Freelance',
-                    location: 'Remote',
-                    period: 'Jan 2024 – Present',
-                    highlights: [
-                      'Build AI-assisted workflows that automate repetitive research, drafting, and admin',
-                      'Design and refine prompts to improve accuracy and tone consistency',
-                      'Train and evaluate AI models on conversational style and language variation',
-                      'Quality-check AI output before it reaches a client or customer'
+                      'Build AI-assisted workflows that automate repetitive admin and drafting',
+                      'Prompt engineering to improve accuracy and tone consistency',
+                      'Train and evaluate AI models on conversational style and language variation'
                     ]
                   },
                   {
                     title: 'Communications & Email Marketing Specialist',
                     company: 'Qwoted',
                     location: 'Remote, USA',
-                    period: 'Jan 2023 – Mar 2026',
+                    period: '2024 – Present',
                     highlights: [
                       'Segmented, personalized email campaigns across the customer lifecycle',
                       'Consistent brand voice across 300+ monthly interactions',
