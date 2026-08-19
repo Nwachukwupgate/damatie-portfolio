@@ -328,12 +328,12 @@ export default function Home() {
                 whileHover={{ scale: 1.05, backgroundColor: "rgba(34, 211, 238, 0.2)" }}
               >
                 <Sparkles size={16} className="animate-pulse" />
-                Communications &amp; Marketing Specialist
+                Welcome to my portfolio
               </motion.span>
             </motion.div>
 
             <motion.h1
-              className="text-3xl md:text-4xl lg:text-5xl text-center md:text-left font-bold mb-6 leading-[1.15] tracking-tight flex flex-col gap-1"
+              className="text-4xl md:text-5xl lg:text-6xl text-center md:text-left font-bold mb-6 leading-[1.1] tracking-tight flex flex-col gap-1"
               variants={staggerItem}
             >
               <TextReveal>Get heard. Get results.</TextReveal>
@@ -341,6 +341,13 @@ export default function Home() {
                 <TextReveal delay={0.1}>Get your time back.</TextReveal>
               </span>
             </motion.h1>
+
+            <motion.div
+              className="text-xl md:text-2xl text-center md:text-left font-semibold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"
+              variants={staggerItem}
+            >
+              Communications &amp; Marketing Specialist
+            </motion.div>
 
             <motion.p
               className="text-lg md:text-xl text-center md:text-left text-gray-400 mb-8 max-w-xl leading-relaxed"
@@ -891,7 +898,7 @@ export default function Home() {
                     title: 'Virtual Assistant & Communications Support',
                     company: 'Freelance',
                     location: 'Remote',
-                    period: 'Jan 2025 – Present',
+                    period: 'Jan 2024 – Present',
                     highlights: [
                       'Inbox management, correspondence, and follow ups for clients',
                       'Calendar coordination and deadline tracking across time zones',
@@ -900,10 +907,22 @@ export default function Home() {
                     ]
                   },
                   {
+                    title: 'AI Automation & Prompt Engineering',
+                    company: 'Freelance',
+                    location: 'Remote',
+                    period: 'Jan 2024 – Present',
+                    highlights: [
+                      'Build AI-assisted workflows that automate repetitive research, drafting, and admin',
+                      'Design and refine prompts to improve accuracy and tone consistency',
+                      'Train and evaluate AI models on conversational style and language variation',
+                      'Quality-check AI output before it reaches a client or customer'
+                    ]
+                  },
+                  {
                     title: 'Communications & Email Marketing Specialist',
                     company: 'Qwoted',
                     location: 'Remote, USA',
-                    period: 'Jan 2023 – Present',
+                    period: 'Jan 2023 – Mar 2026',
                     highlights: [
                       'Segmented, personalized email campaigns across the customer lifecycle',
                       'Consistent brand voice across 300+ monthly interactions',
